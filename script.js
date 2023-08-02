@@ -11,9 +11,11 @@ console.log('getting code');
  * @type {Peer}
  */
 const peer = new Peer(''+Math.floor(Math.random()*2**18).toString(36).padStart(4,0), {
-    host: location.hostname,
+    host: "192.168.7.168",
     debug: 1,
-    path: '/myapp'
+    port: 8001,
+    path: '/myapp',
+    secure: false
 });
 
 window.peer = peer;
